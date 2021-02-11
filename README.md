@@ -6,14 +6,14 @@
 </p>
 
 
-###:rocket: Projeto
+### :rocket: Projeto
 - Esse Projeto de controle de finanças foi desenvolvido na [Maratona Discover #1](https://maratonadiscover.rocketseat.com.br/inscricao), realizada pela galera incrível da [@Rocketseat.](https://github.com/Rocketseat)
 
-###:jigsaw: Tecnologias
+### :jigsaw: Tecnologias
 
 Foram usadas as seguintes tecnologias para o desenvolvimento do projeto:
 
--  HTML
+- HTML
 - CSS
 - JavaScript
 
