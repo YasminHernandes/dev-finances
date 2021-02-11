@@ -1,7 +1,9 @@
-# MARATONA DISCOVER #1
+<h1 align="center">MARATONA DISCOVER #1</h1>
 
-![](https://github.com/YasminHernandes/maratona-discover/blob/master/screenshot/webAndMobileScreenshot-removebg-preview.png)
 
+<p align="center">
+    <img src="https://github.com/YasminHernandes/maratona-discover/blob/master/screenshot/webAndMobileScreenshot-removebg-preview.png" alt="Screenshot Web and Mobile">
+</p>
 
 
 ### Projeto
