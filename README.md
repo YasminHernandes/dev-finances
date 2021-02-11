@@ -1,6 +1,6 @@
 # MARATONA DISCOVER #1
 
-![](https://github.com/YasminHernandes/maratona-discover/blob/master/screenshot/webAndMobileScreenshot.jpg)
+![](https://github.com/YasminHernandes/maratona-discover/blob/master/screenshot/webAndMobileScreenshot-removebg-preview.png)
 
 
 
