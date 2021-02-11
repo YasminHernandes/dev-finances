@@ -1,6 +1,6 @@
 # MARATONA DISCOVER #1
 
-![]('https://github.com/YasminHernandes/maratona-discover/blob/master/screenshot/Anota%C3%A7%C3%A3o%202021-02-10%20195811.jpg?raw=true')
+![](https://github.com/YasminHernandes/maratona-discover/blob/master/screenshot/webAndMobileScreenshot.jpg?raw=true)
 
 
 
