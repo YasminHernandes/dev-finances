@@ -19,7 +19,7 @@ Foram usadas as seguintes tecnologias para o desenvolvimento do projeto:
 
 
 
-### Licença
+### :memo: Licença
 
 Esse projeto está sob licença MIT. Veja o arquivo LICENSE para mais detalhes
 
