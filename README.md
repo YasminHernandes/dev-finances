@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img src="https://github.com/YasminHernandes/maratona-discover/blob/master/dev-finances/screenshot/screenshot.png">
+    <img src="https://github.com/YasminHernandes/maratona-discover/blob/master/dev-finances/screenshot/screenshot1.png">
 </p>
 
 
