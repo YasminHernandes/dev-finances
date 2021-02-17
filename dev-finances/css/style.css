@@ -127,13 +127,9 @@ button:hover {
     background-color: #fff4;
     border-radius: 32px; 
     position: absolute;
-    right: 10%;
-    z-index: 0;
-}
-
-.dark-mode-toggle span {
-    z-index: -1;
-    font-size: .7rem;
+    top: 2.4rem;
+    right: 4.2rem;
+    
 }
 
 #darkmode {
@@ -400,6 +396,11 @@ footer p {
         grid-template-columns: repeat(3, 1fr); /* repete 3x 1fr */
         gap: 2rem; /* espaço entre colunas */
     }
+}
 
-
+@media (max-width: 425px) {
+    .dark-mode-toggle {
+        top: 13%;
+        left: 45%;
+    }
 }
