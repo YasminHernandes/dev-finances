@@ -1,8 +1,27 @@
 :root {
-    --dark-blue: #363f5f;
+    --color-body: #dddddda4;
+    --titles: #363f5f;
     --lilac: #A661EB;
     --light-lilac: #DAABF2;
-    --red: #e92929;
+    --red: #e61d1d;
+    --cards: #fff;
+    --title-table: #969cb3;
+    --table: #fff;
+
+    --modal-bg: #f2f0f5;
+}
+
+.dark-mode:root { 
+    --color-body: #3f334b;
+    --titles: #eff2ff;
+    --lilac: #A661EB;
+    --light-lilac: #DAABF2;
+    --red:#e61d1d;
+    ;
+    --cards: #704b8f;
+    --table: #29123b;
+
+    --modal-bg: #29123b;
 }
 
 /* Global ======================= */
@@ -17,7 +36,7 @@ html {
 }
 
 body {
-    background-color: #dddddda4;
+    background-color: var(--color-body);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -47,10 +66,10 @@ body {
 h2 {
     margin: 3.2rem 0 0.8rem;
     font-weight: normal;
-    color: var(--dark-blue);
+    color: var(--titles);
 }
 
-/* Links & Buttons */
+/* Links & Buttons ===================*/
 a {
     color: var(--lilac);
     text-decoration: none;
@@ -101,36 +120,104 @@ button:hover {
     width: 48%;
 }
 
+/* Dark Mode ===================*/
+.dark-mode-toggle {
+    width: 3.8rem;
+    height: 1.9rem;
+    background-color: #fff4;
+    border-radius: 32px; 
+    position: absolute;
+    right: 10%;
+    z-index: 0;
+}
+
+.dark-mode-toggle span {
+    z-index: -1;
+    font-size: .7rem;
+}
+
+#darkmode {
+    display: none;
+}
+
+.toggle {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    background-color: #fcf4ff9a;
+    border-radius: 32px;
+    box-shadow: none;
+    transition: .2s cubic-bezier(0.895, 0.07, 0.685, 0.68);
+    cursor: pointer;
+    z-index: 1;
+    opacity: 1;
+}
+
+.toggle::before {
+    content: "🌙";
+    position: absolute;
+    font-size: 0;
+    top: 0.15rem;
+    left: 0.17rem;
+
+}
+
+.toggle::after {
+    align-self: center;
+    content: "☀️";
+    position: absolute;
+    font-size: 12px;
+    top: 0.15rem;
+    left: 0.17rem;
+}
+
+#darkmode:checked + .toggle {
+    left: 2rem;
+    background-color: #fcf4ff9a;
+    ;
+}
+
+#darkmode:checked +.toggle::after {
+    font-size:0;
+}
+
+#darkmode:checked +.toggle::before {
+    font-size: 12px ;
+}
+
 /* Header ======================= */
 header {
     height: 1vh;
     background: linear-gradient(to left, #b246e7, #c070e9, #b178f3);
-    padding: 2rem 0 10rem;
+    padding: 2.5rem 0 13rem;
     text-align: center;
 }
 
 #logo {
     font-size: 1.6rem;
     font-weight: 100;
-    color: #ffffff;
+    color: #fff;
 }
 
 /* Balance ======================= */
 #balance {
-    margin-top: -7rem;
+    margin-top: -8rem;
 }
 #balance h2 {
-    color: #ffffff;
+    color: #fff;
     margin-top: 0;
 }
 
 /* Cards ======================= */
 .card {
-    background-color: #ffffff;
+    background-color: var(--cards);
     border-radius: .25rem;
     margin-bottom: 20px;
     padding: 1.5rem 2rem;
-    color: var(--dark-blue);
+    color: var(--titles);
 }
 
 .card h3 {
@@ -162,7 +249,7 @@ header {
 #data-table {
     width: 100%; 
     border-spacing: 0 0.5rem;
-    color: #969cb3;
+    color: var(--title-table);
 
     /* display: block;
     overflow-x:auto; */
@@ -177,7 +264,7 @@ table thead th:last-child, table tbody td:last-child {
 }
 
 table th {
-    background: #fff;
+    background: var(--table);
     font-weight: normal;
     padding: 1rem 2rem;
     text-align: left;
@@ -192,12 +279,12 @@ table tbody tr:hover {
 }
 
 table tbody td {
-    background: #fff;
+    background: var(--table);
     padding: 1rem 2rem;
 }
 
 td.description {
-    color: var(--dark-blue);
+    color: var(--titles);
 }
 
 td.income {
@@ -212,7 +299,7 @@ td img {
     cursor: pointer;
 }
 
-/* Modal */
+/* Modal ===================*/
 .modal-overlay {
     width: 100%;
     height: 100%;
@@ -233,12 +320,13 @@ td img {
 }
 
 .modal {
-    background-color: #f2f0f5;
+    background-color: var(--modal-bg);
     padding: 2.4rem;
     position: relative;
+    box-shadow: 2px 2px 5px 1px rgba(255, 255, 255, 0.1);
 }
 
-/* Form */
+/* Form ===================*/
 #form {
     max-width: 500px;
 }
@@ -251,11 +339,11 @@ input {
     width: 100%;
     border: none;
     border-radius: 0.2rem;
-    padding: 0.8rem;
+    padding: 1rem;
 }
 
 .input-group {
-    margin-top: 0.8rem;
+    margin-top: 1rem;
 }
 
 .input-group input:focus {
@@ -265,6 +353,10 @@ input {
 
 .input-group small {
     opacity: 0.4;
+}
+
+.dark-mode small {
+    color: #fff;
 }
 
 .input-group.actions {
@@ -288,7 +380,7 @@ input {
 footer {
     text-align: center;
     padding: 2rem 0 1.2rem;
-    color: var(--dark-blue);
+    color: var(--titles);
     opacity: .6;
 }
 
@@ -296,7 +388,7 @@ footer p {
     z-index:0;
 }
 
-/* Responsive */
+/* Responsive ===================*/
 
 @media (min-width: 800px) {
     html {

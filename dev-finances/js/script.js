@@ -231,3 +231,20 @@ const App = {
 }
 
 App.init()
+
+// dark-mode
+/* const html = document.querySelector("html")
+const checkbox = document.querySelector("input[type=checkbox]")
+
+checkbox.addEventListener("change", ( {target}) => {
+    target.checked ? changeColors() : changeColors()
+});
+ */
+
+const darkMode = document.querySelector('#darkmode')
+
+// ao clicar mudaremos as cores
+darkMode.addEventListener('click', () => {
+    // adiciona a classe 'dark-mode' ao html
+    document.documentElement.classList.toggle('dark-mode')
+})
