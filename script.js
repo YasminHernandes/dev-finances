@@ -3,12 +3,12 @@ const Modal = {
     open() {
         // Abrir modal
         // Adicionar a class active ao modal
-        document.querySelector(".modal-overlay") .classList.add('active')
+        document.querySelector(".modal-overlay").classList.add('active')
     },
     close() {
         // fechar o modal
         // remover a class active do modal
-        document.querySelector(".modal-overlay") .classList.remove('active')
+        document.querySelector(".modal-overlay").classList.remove('active')
     }
 }
 
@@ -24,15 +24,15 @@ const Storage = {
 
 const Transaction = {
     all: Storage.get(),
-/*  all:
-    [
-        {
-            description: "Website",
-            amount: 500000,
-            date: "29/01/2021",
-        },
-    ], 
- */
+    /*  all:
+        [
+            {
+                description: "Website",
+                amount: 500000,
+                date: "29/01/2021",
+            },
+        ], 
+     */
     add(transaction) {
         Transaction.all.push(transaction)
         App.reload()
@@ -55,7 +55,7 @@ const Transaction = {
                 // somar a uma variavel e retornar a variavel
                 income += transaction.amount;
             }
-        
+
         })
         return income;
     },
@@ -95,7 +95,7 @@ const DOM = {
     },
 
     //formata e atualiza os dados e valores da tabela de transações
-    innerHTMLTransaction(transaction, index){
+    innerHTMLTransaction(transaction, index) {
         const CSSclass = transaction.amount > 0 ? "income" : "expense"
 
         const amount = Utils.formatCurrency(transaction.amount)
@@ -180,8 +180,8 @@ const Form = {
         date = Utils.formatDate(date)
 
         return {
-            description, 
-            amount, 
+            description,
+            amount,
             date,
         }
     },
@@ -224,7 +224,7 @@ const App = {
         Storage.set(Transaction.all)
     },
 
-    reload(){
+    reload() {
         DOM.clearTransactions()
         App.init()
     },
